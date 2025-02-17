@@ -1,41 +1,28 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Album : MonoBehaviour
 {
-    public float slideSpeed = 5;
-    bool slidE = false;
+    public float moveDistance = 13f; // the distanve for every move
 
-    // Start is called before the first frame update
-    void Start()
+    void Start() // the way to click before the game start 
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    public void MoveLeft() // the way to switch to the left song
     {
-        if (slidE == true)
-        {
-            SlideOn();
-        }
+        Vector2 moveLeft = transform.position;
+        moveLeft.x -= moveDistance;
+        transform.position = moveLeft;
     }
 
-    public void SlideOn()
+    public void MoveRight() // the way to switch the write song
     {
-        Vector2 slide = transform.position;
-        slide.x += slideSpeed * Time.deltaTime;
-        transform.position = slide;
-
-        if(slide.x >= 10)
-        {
-            slidE = false;
-        }
-    }
-
-    public void yesYes()
-    {
-        slidE = true;
+        Vector2 moveRight = transform.position;
+        moveRight.x += moveDistance;
+        transform.position = moveRight;
     }
 }
