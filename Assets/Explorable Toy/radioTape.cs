@@ -7,7 +7,7 @@ public class radioTape : MonoBehaviour
 {
     public GameObject rectangle; 
     public Slider verticalSlider; 
-    public float rectangleMoveRange = 5f; 
+    public float rectangleMoveRange = 3f; 
     // Start is called before the first frame update
     void Start()
     {
