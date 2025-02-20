@@ -6,14 +6,14 @@ public class TankShooting : MonoBehaviour
 {
     public GameObject bulletPrefab;
     public Transform firePoint;
-    public AudioSource fireSound;
-    public float bulletSpeed = 10f;
+    public AudioSource FSound;
+    public float bulletSpeed = 5f;
 
     void Start()
     {
-        if (fireSound != null)
+        if (FSound != null)
         {
-            fireSound.Stop();
+            FSound.Stop();
         }
     }
 
@@ -30,9 +30,9 @@ public class TankShooting : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.AddComponent<BulletMovement>().speed = bulletSpeed;
 
-        if (fireSound)
+        if (FSound)
         {
-            fireSound.Play();
+            FSound.Play();
         }
     }
   
