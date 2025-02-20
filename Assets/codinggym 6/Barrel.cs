@@ -21,5 +21,5 @@ public class TankBarrel : MonoBehaviour
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePos.z = transform.position.z;
         transform.right = mousePos - transform.position;
-    }
+    } 
 }
