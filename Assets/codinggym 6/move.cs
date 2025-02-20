@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class tankMove : MonoBehaviour
 {
-    public float Speed = 5.0f;
+    public float Speed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,8 +15,8 @@ public class tankMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 tank1 = transform.position;
-        tank1.x += Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime;
-        transform.position = tank1;
+        Vector2 objectTank = transform.position;
+        objectTank.x += Input.GetAxisRaw("Horizontal") * Speed * Time.deltaTime;
+        transform.position = objectTank;
     }
 }
