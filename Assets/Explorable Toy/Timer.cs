@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 {
     public Slider slider; //This is to activate the slider in unity. 
     public float t = 0f; //I set a value of the time, so that it start at o.
-    public float spd = 0.001f;//This controls the speed of timer to make it move more slowly, to simulate the music timer effect. 
+    public float spd = 0.01f;//This controls the speed of timer to make it move more slowly, to simulate the music timer effect. 
 
     public TextMeshProUGUI PlayText;//This is the text UI element that will display the timer value.
 
@@ -29,7 +29,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         t += spd;//increase the slider's speed
-        slider.value = Mathf.Lerp(slider.value, t, Time.deltaTime * 0.001f);
+        slider.value = Mathf.Lerp(slider.value, t, Time.deltaTime * 0.01f);
         // let the slider increase by muiltiplying the delta time, to simulate the music playing effect, it should be slowly. Also make it more smooth using lerp concept. 
 
         UpdatePlayingText();//refresh the playing text to show the updated time. 
@@ -40,7 +40,6 @@ public class Timer : MonoBehaviour
         //the time should be reset when switching to the next album.
         t = 0; //the value here is to reset the timer to 0 first.
         slider.value = 0;//reset the slider UI to reflect the reset timer.
-        UpdatePlayingText();//the timer should also be updated here.
 
     }
 
