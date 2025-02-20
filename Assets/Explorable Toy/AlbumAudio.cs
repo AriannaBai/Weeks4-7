@@ -39,7 +39,7 @@ public class AlbumAudio : MonoBehaviour
             audioSource.clip = musics[number];//make the selected song to the AudioSource component.
 
             audioSource.Play();//now start playing the selected music.
-
+             
         }
     }
 }
