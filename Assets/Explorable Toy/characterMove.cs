@@ -40,6 +40,6 @@ public class characterMove : MonoBehaviour
         }
         transform.position = pos;//Apply the update position to the created object.
     }
-}
+} 
 
 
