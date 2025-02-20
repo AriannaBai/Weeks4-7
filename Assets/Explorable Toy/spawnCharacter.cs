@@ -21,7 +21,7 @@ public class spawnCharacter : MonoBehaviour
                 movementScript.speed = Random.Range(1, 8);
             }
             Destroy(movementScript, 8);//Remove the movement script after 8 seconds, so the character stops moving.
-
+             
         }
     }
 }
