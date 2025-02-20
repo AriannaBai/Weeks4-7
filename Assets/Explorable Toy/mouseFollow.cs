@@ -29,7 +29,7 @@ public class mouseFollow : MonoBehaviour
             transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
             //Update the character's position to match the mouse.
 
-        }
+        } 
 
     }
 }
